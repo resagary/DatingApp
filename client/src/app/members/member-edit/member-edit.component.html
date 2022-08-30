@@ -28,8 +28,8 @@
                     <p>{{ member.created | date: 'longDate' }}</p>
                 </div>
             </div>
-            <div class="card-footer">
-                <button [disabled]="!editForm.dirty" form="editForm" type="submit" class="btn btn-success btn-block">Save Changes</button>
+            <div class="card-footer d-flex">
+                <button [disabled]="!editForm.dirty" form="editForm" type="submit" class="btn btn-success btn-block flex-grow-1">Save Changes</button>
             </div>
         </div>
     </div>
@@ -45,10 +45,10 @@
                     <h4 class="mt-2">Interests</h4>
                     <textarea [(ngModel)]="member.interests" name="interests" rows="6" class="form-control"></textarea>
                     <h4 class="mt-2">Location Details: </h4>
-                    <div class="form-inline">
-                        <label for="city">City: </label>
-                        <input [(ngModel)]="member.city" type="text" name="city" class="form-control">
-                        <label for="country">Country: </label>
+                    <div class="d-flex">
+                        <label class="col-form-label me-2" for="city">City: </label>
+                        <input [(ngModel)]="member.city" type="text" name="city" class="form-control me-2">
+                        <label class="col-form-label me-2" for="country">Country: </label>
                         <input [(ngModel)]="member.country" type="text" name="country" class="form-control">
                     </div>
                 </form>
